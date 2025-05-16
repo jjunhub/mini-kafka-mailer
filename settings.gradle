@@ -1,3 +1,4 @@
 rootProject.name = 'com'
 
 include 'producer'
+include 'consumer'
