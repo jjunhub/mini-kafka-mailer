@@ -1,1 +1,3 @@
 rootProject.name = 'com'
+
+include 'producer'

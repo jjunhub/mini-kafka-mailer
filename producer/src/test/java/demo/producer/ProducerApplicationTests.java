@@ -1,10 +1,10 @@
-package demo.com;
+package demo.producer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ComApplicationTests {
+class ProducerApplicationTests {
 
     @Test
     void contextLoads() {
