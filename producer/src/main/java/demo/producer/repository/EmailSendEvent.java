@@ -35,6 +35,6 @@ public class EmailSendEvent {
     }
 
     public enum Status {
-        PENDING, SENT, FAILED
+        PENDING, SENT, FAILED, PROCESSING
     }
 }
