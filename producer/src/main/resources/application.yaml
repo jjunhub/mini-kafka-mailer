@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: producer
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mailer
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
