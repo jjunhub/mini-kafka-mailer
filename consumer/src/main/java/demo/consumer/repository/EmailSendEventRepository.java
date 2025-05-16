@@ -5,5 +5,5 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmailSendEventRepository extends JpaRepository<EmailSendEvent, Long> {
-    List<EmailSendEvent> findTop10ByStatusOrderByCreatedAtAsc(Status status);
+    List<EmailSendEvent> findTop10ByStatusOrderByProducedAtAsc(Status status);
 }

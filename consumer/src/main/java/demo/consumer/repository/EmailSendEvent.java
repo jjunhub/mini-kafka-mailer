@@ -26,24 +26,28 @@ public class EmailSendEvent {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime producedAt;
+
+    private LocalDateTime consumedAt;
 
     public EmailSendEvent(String email) {
         this.email = email;
         this.status = Status.PENDING;
-        this.createdAt = LocalDateTime.now();
+        this.producedAt = LocalDateTime.now();
     }
-
     public void markProcessing() {
         this.status = Status.PROCESSING;
+        this.consumedAt = LocalDateTime.now();
     }
 
     public void markSent() {
         this.status = Status.SENT;
+        this.consumedAt = LocalDateTime.now();
     }
 
     public void markFailed() {
         this.status = Status.FAILED;
+        this.consumedAt = LocalDateTime.now();
     }
 
     public enum Status {

@@ -24,7 +24,7 @@ public class EmailSendScheduler {
     @Scheduled(fixedRate = 1000) // 1초마다 실행
     public void fetchPendingEmails() {
         // 이벤트 조회
-        List<EmailSendEvent> events = repository.findTop10ByStatusOrderByCreatedAtAsc(EmailSendEvent.Status.PENDING);
+        List<EmailSendEvent> events = repository.findTop10ByStatusOrderByProducedAtAsc(EmailSendEvent.Status.PENDING);
         if (events.isEmpty()) {
             log.info("No pending email events found");
             return;
